@@ -37,7 +37,7 @@
             </div>
         </div>
     </div>
-    <input type='submit' class='btn btn-info' id='shorten' value='Shorten' />
+    <input type='submit' class='btn btn-info' id='shorten' value='缩短网址' />
     <a href='#' class='btn btn-warning' id='show-link-options'>链接选项</a>
     <input type="hidden" name='_token' value='{{csrf_token()}}' />
 </form>
