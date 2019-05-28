@@ -1,0 +1,31 @@
+<div class="modal fade" id="edit-user-api-info-{{ userId }}" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title">编辑用户的 API 设置</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    <span>API 激活</span>:
+
+                    <code class='status-display' ng-bind="apiActive"></code>
+
+                    <a ng-click="toggleAPIStatus()" class='btn btn-xs btn-success'>切换</a>
+                </p>
+
+                <p>
+                    <span>API 密钥: </span><code class='status-display' ng-bind="apiKey">{{api_key}}</code>
+                    <a ng-click="parentGenerateNewAPIKey($event)" class='btn btn-xs btn-danger'>重置</a>
+                </p>
+
+                <p>
+                    <span>API 配额 (请求/分钟, -1 为无限制):</span> <input type='number' class='form-control api-quota' ng-model="apiQuota">
+                    <a ng-click="updateAPIQuota()" class='btn btn-xs btn-warning'>修改</a>
+                </p>
+            </div>
+        </div> <!-- /.modal-content -->
+    </div> <!-- /.modal-dialog -->
+</div> <!-- /.modal -->
